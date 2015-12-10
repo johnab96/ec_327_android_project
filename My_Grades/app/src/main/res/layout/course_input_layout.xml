@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="start">
+
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/course_info_input_section">
+
+        <!-- Label to show what course the user is currently in -->
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/course_name_input_edit_text"
+            android:id="@+id/course_name_input"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:lines="3"
+            android:maxLines="1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="20dp"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="@string/course_name_edit_text"
+            android:id="@+id/course_hours_input"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:lines="3"
+            android:maxLines="1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="20dp"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/major_course_check_box"
+            />
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/course_input_submit_button"
+        android:layout_toLeftOf="@+id/course_input_submit_button"
+        android:layout_above="@+id/course_information_grid_layout"
+        android:src="@drawable/submit_button_md_1"
+        android:onClick="send_course_info"
+        tools:ignore="NotSibling" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/course_information_grid_layout"
+        android:layout_below="@id/course_info_input_section"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:columnCount="4"
+        android:rowCount="7"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:background="#ed9f9f">
+
+        <!-- Header Section of the GridLayout -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/grid_display_cname_header"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="30dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gdisplay_chours_header"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="@string/gdisplay_cmajor_header"
+            android:layout_marginRight="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="@string/gdisp_edit_header"/>
+
+        <!-- Row 1 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/r1_c1"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="30dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/r1_c2"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:id="@+id/r1_c3"
+            android:layout_marginRight="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:text="delete"
+            android:id="@+id/r1_c4"
+            android:clickable="true"/>
+
+        <!-- Row 2 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/r2_c1"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/r2_c2"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:id="@+id/r2_c3"
+            android:layout_marginRight="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:text="delete"
+            android:textStyle="bold"
+            android:id="@+id/r2_c4"
+            android:clickable="true"/>
+
+        <!-- Row 3 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/r3_c1"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/r3_c2"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:id="@+id/r3_c3"
+            android:layout_marginRight="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:id="@+id/r3_c4"
+            android:text="delete"
+            android:clickable="true"/>
+        <!-- Row 4 -->
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/r4_c1"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/r4_c2"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:id="@+id/r4_c3"
+            android:layout_marginRight="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:text="delete"
+            android:id="@+id/r4_c4"
+            android:clickable="true"/>
+        <!-- Row 5 -->
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/r5_c1"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/r5_c2"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:id="@+id/r5_c3"
+            android:layout_marginRight="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:text="delete"
+            android:id="@+id/r5_c4"
+            android:clickable="true"/>
+    </GridLayout>
+</RelativeLayout>
+
+
+
+

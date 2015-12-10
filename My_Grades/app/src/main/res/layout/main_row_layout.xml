@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="ec327_final_project.my_grades.choose_gpa_activity"
+    tools:showIn="@layout/activity_choose_gpa_activity"
+    android:rowCount="1"
+    android:columnCount="1">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_row="0">
+
+<!-- make sure clickable remains true -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/main_custom_layout"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:padding="15dp"
+            android:clickable="true"
+            />
+    </LinearLayout>
+
+</GridLayout>

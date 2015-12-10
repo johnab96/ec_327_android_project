@@ -1,0 +1,46 @@
+
+
+<!--
+menu denotes options menu i.e. dots in the upper right hand corner
+Any new items to be added must be added between item tags
+for app:showAsAction, app is the unique part of the app
+in the choose_gpa_activity.java folder android.support.v7 provides support
+for action bar on older android versions
+-->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ec327_final_project.my_grades.choose_gpa_activity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+
+    <!--
+    Note: the options_edit_text tag comes from updating strings.xml
+    i.e click the yellow light bulb, update strings.xml, click ok
+
+    showAsAction designates the item to be shown on the action bar
+    app instead of android used because app is the namespace for older
+    android editions
+
+    orderInCategory designates order that options are shown
+    note how the one above is 100 and 101 > 100
+
+    to add icon use android:icon= "@drawable/filename/>
+    move items into drawable folder to use
+    see video 4 4:50
+
+    -->
+
+    <item android:id="@+id/main_exit_option"
+        android:title="@string/options_exit_text"
+        app:showAsAction="ifRoom|withText"
+        android:orderInCategory="101"
+        />
+
+
+</menu>
